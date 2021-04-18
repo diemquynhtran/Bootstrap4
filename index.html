@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a data-toggle="modal" id="login">
                         <span class="fa fa-sign-in"> Login</span>
                     </a>
                 </span>
@@ -40,7 +41,7 @@
     </nav>
 
     <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-sm" role="content">
+        <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
@@ -50,7 +51,7 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="form-col">
+                        <div class="form-row">
                             <div class="form-group col-sm">
                                 <label class="sr-only" for="exampleInputEmail3">Email address</label>
                                 <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
@@ -90,7 +91,7 @@
                     </div>
                     <div class="col-12 col-sm align-self-center">
                             <a type="button" class="btn btn-block btn-warning btn-sm nav-link" 
-                            data-toggle="modal" data-target="#reserveTable">  Reserve Table  </a>    
+                            data-toggle="modal" id="reserveButton">  Reserve Table  </a>    
                     </div>
                 </div>
             </div>
@@ -343,6 +344,17 @@
                         $('#carouselButton').children('span').removeClass('fa-play');
                         $('#carouselButton').children('span').addClass('fa-pause');
                     }
+                })
+            });
+            $(function(){
+                $('#login').click(function(){
+                    $('#loginModal').modal();
+                })
+            })
+
+            $(function(){
+                $('#reserveButton').click(function(){
+                    $('#reserveTable').modal();
                 })
             })
         </script>

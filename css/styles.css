@@ -55,3 +55,10 @@ body {
   bottom: 0px;
   z-index: 1;
 }
+
+.modal .modal-header {
+  background-color: rgb(203, 185, 206);
+}
+.modal .modal-body {
+  background-color: rgb(248, 252, 251);
+}
